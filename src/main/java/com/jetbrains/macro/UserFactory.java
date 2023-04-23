@@ -10,3 +10,4 @@ public class UserFactory {
         return new User(name, age, locked, dateOfBirth);
     }
 }
+
