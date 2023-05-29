@@ -1,4 +1,3 @@
-import org.junit.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +11,7 @@ public class TestReadFile {
     public void testRead() {
         ReadFile readFile = new ReadFile();
         try {
-            var content= readFile.read("a.txt");
+            var content = readFile.read("a.txt");
             Assertions.assertEquals("hello", content);
 
         } catch (IOException e) {

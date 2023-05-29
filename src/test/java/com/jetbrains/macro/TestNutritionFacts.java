@@ -14,4 +14,13 @@ public class TestNutritionFacts {
 
         Assertions.assertEquals(nutritionFacts.carbohydrate, 3);
     }
+
+    @Test
+    public void genericBuilder(){
+        NyPizza nyPizza = new NyPizza.Builder(NyPizza.Size.MEDIUM)
+                .addTopping(Pizza.Topping.PEPPER)
+                .build();
+        Assertions.assertEquals(nyPizza.toppings.size(), 1);
+        Assertions.assertEquals(nyPizza.toppings.contains(Pizza.Topping.PEPPER), true);
+    }
 }
